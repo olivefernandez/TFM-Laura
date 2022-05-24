@@ -186,12 +186,3 @@ ggplot(data = data, aes(x = log10(adult_mass_g), y = data$generation_length_d)) 
 
 
 ################ 
-
-dataNA <- read.csv("C:/master/TFM/TFM-Laura/data/new_data_missingNA.csv", sep=";")
-hab_simpleNA <- factor(dataNA$hab_simple)
-hab_complexNA <- factor(dataNA$hab_complex)
-
-ggplot(data = dataNA, aes(x = log10(adult_mass_g), y = log10(gestation_length_d))) + 
-  geom_point(aes(color = hab_complexNA)) +
-  theme(legend.title = element_blank()) +
-  labs(x = "Log Adult mass (g)", y = "Gestation length (d)")
